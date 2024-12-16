@@ -1,0 +1,462 @@
+.Home {
+  /* Background settings */
+  background-image: url('/public/images/home.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.Home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; 
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(10px); 
+  z-index: -2; 
+}
+
+.Home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+.home-title {
+  font-size: 4rem; 
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); 
+  margin-bottom: 1rem;
+  z-index: 1; 
+}
+
+.home-subtitle {
+  font-size: 2rem; 
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+  z-index: 1; 
+  margin: 0;
+}
+
+
+/* Navbar container */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #2c3e50; 
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+/* Left section containing the title */
+.Navbar h1 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Right section containing the navigation links */
+.Navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List item styling */
+.Navbar ul li {
+  display: inline-block;
+}
+
+/* Link styling */
+.Navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+.Navbar a:hover {
+  color: #f7f7f7; 
+  text-decoration: underline;
+}
+
+/* Make navbar responsive */
+@media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .Navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* StudentList Container */
+.StudentList {
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  max-width: 900px;
+  border: 1px solid #ddd;
+}
+
+/* StudentList Container */
+.StudentList {
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #1D3557, #457B9D); 
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+  max-width: 900px;
+  border: 1px solid #ddd;
+}
+
+/* StudentList Title */
+.StudentList h2 {
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FF6F61, #FFB6C1); 
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Styling for search input */
+.StudentList input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease;
+}
+
+.StudentList input[type="text"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Table styling */
+.StudentList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table Header */
+.StudentList th {
+  padding: 16px;
+  text-align: left;
+  background-color: #2c3e50; 
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px 8px 0 0; 
+}
+
+/* Table Rows */
+.StudentList tr:nth-child(even) {
+  background-color: #ecf0f1; 
+}
+
+.StudentList tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.StudentList tr:hover {
+  background-color: #dfe6e9; 
+  transition: background-color 0.3s ease;
+}
+
+.StudentList th, .StudentList td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Action buttons styling */
+.StudentList a {
+  color: #3498db; 
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.StudentList a:hover {
+  color: #1D3557; 
+  text-decoration: underline;
+}
+
+/* Action Delete Button styling */
+.StudentList button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e74c3c; 
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.StudentList button:hover {
+  background-color: #c0392b;
+}
+
+/* StudentList Card Styling  */
+.StudentList .student-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.StudentList .student-card .student-info {
+  flex: 2;
+}
+
+.StudentList .student-card .student-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hover effect for student cards */
+.StudentList .student-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* StudentDetails Card Styling */
+.StudentDetails {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff6f61, #ffb6c1); 
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.student-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-image {
+  margin-right: 20px;
+  flex-shrink: 0; 
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; 
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.student-info {
+  flex: 1; 
+}
+
+.student-info h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.student-info p {
+  font-size: 18px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.student-info p strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* StudentForm container */
+.StudentForm {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.StudentForm h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #2c3e50; 
+  margin-bottom: 25px;
+}
+
+/* Input fields styling */
+.StudentForm input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background-color: #f7f7f7;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 0.85em;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Input focus effect */
+.StudentForm input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Button styling */
+.StudentForm button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.StudentForm button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+  .StudentForm {
+    padding: 25px 15px;
+    width: 90%;
+  }
+
+  .StudentForm h2 {
+    font-size: 1.6em;
+  }
+
+  .StudentDetailsCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .StudentDetailsCard .profile-image {
+    margin-top: 20px;
+  }
+
+  .StudentList h2 {
+    font-size: 22px;
+  }
+}
+.grade-filter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grade-filter label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.grade-filter select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+/* Apply background color to the entire page */
+body {
+  background-color: #bdc3c7; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Dashboard specific styles */
+.dashboard-container {
+  text-align: center;
+  padding: 20px;
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  max-width: 1200px; 
+  margin: 20px auto; 
+}
+
+.dashboard-chart {
+  width: 60%;  
+  max-width: 800px;  
+  margin: 0 auto;  
+  padding-top: 20px;
+}
+.dashboard-chart canvas {
+  max-width: 100%;
+  height: auto;  
+}
